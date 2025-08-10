@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    .bg{
+      background-image: url('https://media.istockphoto.com/id/1033277722/photo/textbooks-on-wooden-school-desk-with-chalkboard.webp?a=1&b=1&s=612x612&w=0&k=20&c=agrr04uMHR7Pep-cBfYpy0WMCiBlyUEf7CCm0P3rbh8=');
+      background-size: cover ; background-repeat: no-repeat; background-position: relative; width: 101%;
+    }
+    .bg::before {
+    content: '';
+    position: absolute;
+   
+    width: 89%;
+    height: 74%;
+    background-color: rgba(86, 86, 86, 0.5); /* Black color with 50% opacity */
+    z-index: 0.6; }
+  </style>
+</head>
+<body>
+   
+  <footer>
+  <div class="bg" >
+  
+  
+    <div class="container row text-light p-5">
+  
+      <div class="col-lg-4 my-2">
+          <h5>About Meal</h5> <br>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+      </div>
+  
+      <div class="col-lg-2 my-2">
+          <h5>Quick Links</h5> <br>
+          <ul style="list-style-type: none;">
+              <li>
+                  <a class=" text-light" href="{% url 'signup' %}">Signup</a>
+                </li>
+                <li>
+                  <a class="text-light " href="{% url 'login' %}">Login</a>
+                </li>
+                <li>
+                  <a class="text-light " href="{% url 'logout' %}">Logout</a>
+                </li>
+              
+                
+          </ul>
+      </div>
+  
+      <!-- <div class="col-lg-3 my-2">
+          <h5>Newsletter</h5>
+          <form action=""> <br>
+              <input type="email" placeholder="Enter you Email" style="width: 190px;">
+          </form> <br>
+          <button style="width: 190px;">Subscribe</button>
+      </div> -->
+  
+      <div class="col-lg-3 my-2">
+          <h5>Contact Us</h5> <br>
+          <p>76/A, Green Lane, Dhanmondi, NYC</p>
+          <p>872349243</p>
+          <p>028392643</p>
+          <p>foodies56@gmail.com</p>
+      </div>
+  
+  </div>
+  <p class="text-white text-center p-3">Copyright ©2024 All rights reserved | This template is made with  by Colorlib</p>
+ <i class="fa fa-heart"></i>  
+</footer>
+
+</body>
+</html>
+

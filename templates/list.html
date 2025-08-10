@@ -1,0 +1,170 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- <style>
+    .bk
+     { 
+     background-image:url('https://media.istockphoto.com/id/2060984408/photo/stack-of-colorful-books-education-background-back-to-school-book-hardback-colorful-books-on.webp?a=1&b=1&s=612x612&w=0&k=20&c=XaNgmcQp2CuObYQYFtp2JoVFwBt-0OArVakn4D5RJZQ=');
+    
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: relative; 
+    height: 500px; width: 500px;
+    
+    }
+
+    .bk::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 25, 25, 0.5); /* Black color with 50% opacity */
+    z-index: 1;
+}
+</style> -->
+
+<!-- <div class="bk container-fluid" style="height: 100vh;"> 
+
+    <p class="a text-center" style="padding-top: 250px;position: relative; z-index: 3; font-family: lucida Handwriting ;">ENJOY YOUR HEALTHY DELICIOUS MEAL</p>
+</div> -->
+
+<style>
+   .bk::before {
+    content: '';
+    position: absolute;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    
+    z-index: 0.6; } 
+
+    .a{ border: 1px solid; padding: 5px; width: 400px;}
+</style>
+
+<div class="container">
+<div class="row container mb-3 pt-5 bk">
+    <div class="col-md-5 text-center">
+         <h1 class="pt-5 text-dark" style="font-size: 45px;">The road to <br> nowhere</h1>
+        <p style="padding-top: 17px ; position: relative; z-index: 3; font-size: 20px;" class="text-center">
+            Welcome to our bookstore, where every page holds a new adventure! Dive into a world of knowledge, creativity, and imagination with our curated selection of books. Whether you're a seasoned reader or just starting your literary journey, we've got something for everyone.</p>
+
+        
+        <button class="btn btn-dark mt-3 px-4"> <strong>Read More</strong> </button>
+    </div>
+
+    <div class="col-md-1"> 
+    </div>
+
+    <div class="col-md-5 text-center ">
+        <img length="118%" width="490px" style="padding-left: 90px ; " src="https://images.unsplash.com/photo-1574025946857-5562696189b2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Ym9va3MlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" alt="">
+    </div>
+</div>
+</div>
+
+<section class="About_Us text-center mt-5" style="padding-top: 100px;">
+<h3>About Us</h3>
+<p style="font-size: 20px;">We’re a highly collaborative & supportive team, coming together on every project to <br> ensure our clients get the very best results.</p>
+
+<img src="https://websitedemos.net/ebook-author-02/wp-content/uploads/sites/576/2020/05/book_formats_free-img.png" alt="" style="padding-top: 50px;">
+
+<div class="row text-center my-4 pt-5" style="padding: 60px 0 60px;">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <h4>Our Mission</h4>
+        <p>Bringing the joy of reading to everyone, we curate high-quality books that inspire, educate, and entertain—creating a vibrant community of book lovers.</p>
+    </div>
+    <div class="col-md-5">
+        <h4>Our Vision</h4>
+        <p>To be the leading online bookstore, fostering a world where literature is accessible, diverse, and empowers minds to explore limitless possibilities.</p>
+    </div>
+</div>
+</section>
+
+
+
+<section class="bookSection text-center mt-5 pt-1">
+<h4 class="mt-5 pt-3 ">Our Books</h4>
+<h2 class="mt-3 pb-5">Best Selling Books</h2>
+<p style="padding-top: 8px ; position: relative; z-index: 3; font-size: 15px;" class="text-center pb-5 pl-5 pr-5">
+Discover a carefully curated collection of bestselling novels, thought-provoking non-fiction, and timeless classics. <br> Whether you're a passionate book lover or exploring new literary adventures,  we bring you the best books to <br> spark imagination and knowledge.        
+</p>
+
+<div class="row container">
+    <div class="col-md-2">
+        <img src="https://websitedemos.net/book-store-02/wp-content/uploads/sites/834/2021/05/author-book-store-book-cover-06.jpg" alt="">
+    </div>
+    <div class="col-md-2">
+        <img src="https://websitedemos.net/book-store-02/wp-content/uploads/sites/834/2021/05/author-book-store-book-cover-08.jpg" alt="">
+    </div>
+    <div class="col-md-2">
+        <img src="https://websitedemos.net/book-store-02/wp-content/uploads/sites/834/2021/05/author-book-store-book-img-01.jpg" alt="">
+    </div>
+    <div class="col-md-2">
+        <img  src="https://websitedemos.net/book-store-02/wp-content/uploads/sites/834/2021/05/author-book-store-book-cover-07.jpg" alt="">
+    </div>
+    <div class="col-md-2">
+        <img src="https://websitedemos.net/book-store-02/wp-content/uploads/sites/834/2021/05/author-book-store-book-cover-06.jpg" alt="">
+    </div>
+</div>
+
+
+
+
+<a href="{% url 'mybooks' %}"> <button class="btn btn-dark p-2 mt-5 px-5"> <strong>Explore Books</strong> </button> </a>
+
+</section>
+<!-- <div class="row mt-5">
+    
+    {% for each in object_list %}
+    <div class="col">
+        <div class="card" style="width: 13rem;">
+            <img src="{{ each.image_url }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ each.title|slice:":25"}} ...</h5>
+                <p class="card-text">${{ each.price|floatformat:2 }}</p>                
+                {% if each.book_available is True %}
+                <li class="text-primary">Available</li>
+                {% else %}
+                <li class="text-danger">Out of Stock !</li>
+                {% endif %}<br>
+                <a href="{% url 'detail' each.id %}" class="btn btn-primary">View</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div> -->
+
+
+<section class="contact pt-4 mt-4">
+    <h2 class="text-center my-2 m-5 p-5">Contact Us</h2>
+ 
+    <div class="row ml-4">
+        <div class="col-md-1"></div>
+      <div class="col-md-5 mt-3">
+           <img class="image-fluid" src="https://th.bing.com/th/id/OIP.ONmudmgU3bZvTOFyT7mTPAHaEA?w=276&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
+      </div>
+
+      <div class="col-md-5 ml-3">
+        <form method="post" class="text-center " >
+            {% csrf_token %}
+            <input type="text" id="name" class="a" name="name" placeholder="Enter Your Name" required><br><br>
+            <input type="email" id="email" class="a" name="email" placeholder="Enter Your Email" required><br><br>
+            <input type="text" id="phone_no" class="a" name="phone_no" placeholder="Enter Your Number" required><br><br>
+            <textarea id="message" name="message" class="a" rows="4" placeholder="Your Message" required></textarea><br>
+            
+            <button class="btn btn-dark p-2 px-5 my-5" type="submit"> <strong>Send</strong></button>
+        </form>
+      </div>
+    </div>
+</section>
+
+
+{%include 'footer.html'%}
+
+{% endblock content %}
+

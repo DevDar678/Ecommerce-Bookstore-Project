@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-center text-dark mt-3">Buy the book</h1>
+
+    
+
+<p style="padding-top: 17px ; font-size: 20px;" class="text-center m-3 pb-3">
+    Start your journey today—because every great story begins with a single page!</p>
+         <br>
+    <h3>{{ category }}</h3>
+
+<div class="row mt-5">
+    
+    {% for each in books %}
+
+    <div class="col">
+        <div class="card" style="width: 13rem;">
+            <img src="{{ each.image_url }}" class="card-img-top" alt="{{ each.title }}" >
+            <div class="card-body">
+                <h5 class="card-title">{{ each.title|slice:":25"}} ...</h5>
+                <p class="card-text">${{ each.price|floatformat:2 }}</p>                
+                {% if each.book_available is True %}
+                <li class="text-primary">Available</li>
+                {% else %}
+                <li class="text-danger">Out of Stock !</li>
+                {% endif %}<br>
+                <a href="{% url 'detail' each.id %}" class="btn btn-primary">View</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<br><br><br><br><br>
+
+
+{%include 'footer.html'%}
+
+{% endblock content %}

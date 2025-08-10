@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+  #Order {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  #Order td, #Order th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  #Order tr:nth-child(even) {background-color: #f2f2f2;}
+
+  #Order tr:hover {background-color: #ddd;}
+
+  #Order th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(253, 193, 101);
+    color: white;
+  }
+</style>
+
+<h2>All Book Orders</h2>
+
+<table id="Order">
+  <tr>
+    <th>Product</th>
+    <th>Created</th>
+   
+  </tr>
+
+  {% for order in orders %}
+  <tr>
+    <td>{{ order.product.title}}</td>
+    <td>{{ order.created }}</td>
+    
+  </tr>
+  {% endfor %}
+
+  {% for cod in cod_orders %}
+  <tr>
+    <td>{{ cod.product.title}}</td>
+    <td>{{ cod.created_at }}</td>
+   
+  </tr>
+  {% endfor %}
+</table>
+
+
+{% endblock %}
